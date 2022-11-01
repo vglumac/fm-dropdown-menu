@@ -4,11 +4,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- displays site properly based on user's device -->
-
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="style.css">
-
   <title>Frontend Mentor | Intro section with dropdown navigation</title>
   </style>
 </head>
@@ -16,7 +13,7 @@
 <body>
   <header>
     <div class="header__logo">
-      <img src="./images/logo.svg">
+      <img src="./images/logo.svg" alt="logo">
     </div>
     <nav class="header__nav">
       <ul class="header__nav-menu">
@@ -40,25 +37,27 @@
       </ul>
       <ul class="header__nav-login">
         <li class="header__nav-item"><a href="#">Login</a></li>
-        <li class="header__nav-item"><a href="#">Register</a></li>
+        <li class="header__nav-item"><a class="button button--light" href="#">Register</a></li>
       </ul>
     </nav>
     <button class="nav__toggle-button">HAMBURGER</button>
   </header>
   <main>
-    <div>
-      <div>
+    <div class="hero">
+      <div class="hero__image">
         <img src="./images/image-hero-mobile.png" alt="hero">
       </div>
-      <h1>Make remote work</h1>
-      <p>Get your team in sync, no matter your location. Streamline processes,
-        create team rituals, and watch productivity soar.</p>
-      <button>Learn more</button>
-      <div>
-        <img src="./images/client-databiz.svg" alt="databiz">
-        <img src="./images/client-audiophile.svg" alt="audiophile">
-        <img src="./images/client-meet.svg" alt="meet">
-        <img src="./images/client-maker.svg" alt="maker">
+      <div class="hero__content">
+        <h1 class="hero__title">Make remote work</h1>
+        <p class="hero__text">Get your team in sync, no matter your location. Streamline processes,
+          create team rituals, and watch productivity soar.</p>
+        <button class="button button--dark">Learn more</button>
+        <div class="hero__client-list">
+          <img src="./images/client-databiz.svg" alt="databiz">
+          <img src="./images/client-audiophile.svg" alt="audiophile">
+          <img src="./images/client-meet.svg" alt="meet">
+          <img src="./images/client-maker.svg" alt="maker">
+        </div>
       </div>
     </div>
   </main>
@@ -67,6 +66,8 @@
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
     Coded by <a href="https://github.com/vglumac" target="_blank">vglumac</a>.
   </div>
+
+  <script src="index.js"></script>
 </body>
 
 </html>

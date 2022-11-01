@@ -18,12 +18,6 @@ li {
 
 /* Navigation menu */
 
-/* .nav__toggle-button {
-   width: 0;
-   height: 0;
-   overflow: hidden;
-} */
-
 header {
     display: flex;
     width: 100vw;
@@ -91,8 +85,8 @@ header {
 }
 
 .slideIn {
-    animation: 3s normal slideIn;
-    animation-delay: 2s;
+    animation: 5s normal slideIn;
+    display:block;
 }
 
 .slideOut {
@@ -115,6 +109,28 @@ header {
 
 }
 
+/* Hero section */
+
+.hero {
+    display: flex;
+    flex-direction: column;
+}
+
+.hero__image {
+    width: 100%;
+}
+
+.hero__image > img {
+    width: 100%;
+}
+
+@media(min-width: 800px) {
+    .hero {
+        flex-direction: row-reverse;
+    }
+    
+
+}
 /* Attribution */
 
 .attribution {
