@@ -1,45 +1,56 @@
 /* Treba lepo reset uraditi ili bas za ovu navigaciju */
 
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap');
+
+:root {
+    --white: hsl(0, 0%, 98%); 
+    --gray: hsl(0, 0%, 41%);
+    --black: hsl(0, 0%, 8%);
+
+    --fs: 18px;
+    --ff: 'Epilogue';
+    --fw-500: 500;
+    --fw-700: 700;
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-a {
-    text-decoration: none;
+body {
+    font-family: var(--ff);
+    font-size: var(--fs);
+    font-weight: var(--fw-500);
 }
 
-ul,
-li {
-    width: fit-content;
-    list-style: none;
-}
 
 /* Navigation menu */
 
-header {
+.header {
     display: flex;
     width: 100vw;
-    position: relative;
-}
-
-.nav__toggle-button {
-    align-self: flex-end;
 }
 
 .header__logo {
-    flex-basis: 0;
-    flex-grow: 1;
+   
 }
 
-
 .header__nav {
-    flex-basis: 0;
-    flex-grow: 5;
+    width: 100%;
     display: flex;
     justify-content: space-between;
-    width: 1000px;
+}
+
+.header__nav-item,
+.header__nav-sub-item {
+    list-style: none;
+}
+
+.header__nav-item {
+    padding: 0.3rem 0.7rem;
+    margin: 0.5rem;
 }
 
 .header__nav-menu {
@@ -56,42 +67,13 @@ header {
     list-style: none;
 }
 
-.header__nav-sub-item {
-    list-style: none;
-    flex-basis: 0;
-    flex-grow: 1;
+.header__nav-sub-menu {
+    position: relative;
+    cursor: pointer;
 }
 
-.hidden {
-    width: 0;
-    height: 0;
-    overflow: hidden;
-    border: none;
-    background-color: transparent;
-}
-
-@keyframes slideIn {
-
-    0% {
-        width: 0;
-        overflow: hidden;
-        height: 400px;
-    }
-
-    100% {
-        width: 400px;
-        height: 400px;
-    }
-}
-
-.slideIn {
-    animation: 5s normal slideIn;
-    display:block;
-}
-
-.slideOut {
-    animation: 3s reverse slideIn;
-    animation-delay: 2s;
+.nav__toggle-button {
+    align-self: flex-end;
 }
 
 @media(max-width: 800px) {
@@ -109,11 +91,112 @@ header {
 
 }
 
+/* Links */
+
+.link {
+    text-decoration: none;
+    color: var(--black);
+}
+
+.link--menu {
+
+}
+
+.link--sub-menu {
+    margin: 0.2rem 0.5rem 0;
+}
+
+/* Navigation sub-menu */
+
+.sub-menu {
+    position: absolute;
+    width: max-content;
+    background-color: var(--white);
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 0 1rem var(--gray);
+    cursor: pointer;
+}
+
+.sub-menu__img {
+    display: inline-block;
+    width: 1.8rem;
+}
+
+.header__nav-sub-item {
+    margin-top: 0.7rem;
+    list-style: none;
+    flex-basis: 0;
+    flex-grow: 1;
+}
+
+.subMenuClosed {
+    position: relative;
+}
+
+.subMenuClosed::after {
+    content: url(./images/icon-arrow-down.svg);
+    position: absolute;
+    top: 0;
+    left: 95%;
+}
+
+.subMenuOpened::after {
+    content: url(./images/icon-arrow-up.svg);
+    position: absolute;
+    top: 0;
+    left: 95%;
+}
+
+/* Hidden */
+
+.hidden {
+    width: 0px;
+    height: 0px;
+    padding: 0;
+    overflow: hidden;
+    border: none;
+    background-color: transparent;
+    box-shadow: none;
+}
+
+/*Animations */
+
+@keyframes slideIn {
+
+    0% {
+        width: 0;
+        overflow: hidden;
+        height: 400px;
+    }
+
+    100% {
+        width: 400px;
+        height: 400px;
+    }
+}
+
+.slideIn {
+    animation: 5s normal slideIn;
+    display: block;
+}
+
+.slideOut {
+    animation: 3s reverse slideIn;
+    animation-delay: 2s;
+}
+
+
 /* Hero section */
+
+main {
+    width: 100vw;
+}
 
 .hero {
     display: flex;
     flex-direction: column;
+    margin: 10rem auto;
 }
 
 .hero__image {

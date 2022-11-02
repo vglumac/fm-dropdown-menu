@@ -11,32 +11,51 @@
 </head>
 
 <body>
-  <header>
+  <header class="header">
     <div class="header__logo">
       <img src="./images/logo.svg" alt="logo">
     </div>
     <nav class="header__nav">
       <ul class="header__nav-menu">
-        <li class="header__nav-item">Features
-          <ul>
-            <li class="header__nav-sub-item"><a href="#">Todo List</a></li>
-            <li class="header__nav-sub-item"><a href="#">Calendar</a></li>
-            <li class="header__nav-sub-item"><a href="#">Reminders</a></li>
-            <li class="header__nav-sub-item"><a href="#">Planing</a></li>
+        <li class="header__nav-item header__nav-sub-menu subMenuClosed">Features
+          <ul class="sub-menu hidden">
+            <li class="header__nav-sub-item">
+              <div class="sub-menu__img">
+                <img alt=" " src="./images/icon-todo.svg">
+              </div>
+              <a class="link link--sub-menu" href="#">Todo List</a>
+            </li>
+            <li class="header__nav-sub-item">
+              <div class="sub-menu__img">
+                <img alt=" " src="./images/icon-calendar.svg">
+              </div>
+              <a class="link link--sub-menu" href="#">Calendar</a>
+            </li>
+            <li class="header__nav-sub-item">
+              <div class="sub-menu__img">
+                <img alt=" " src="./images/icon-reminders.svg">
+              </div>
+              <a class="link link--sub-menu" href="#">Reminders</a>
+            </li>
+            <li class="header__nav-sub-item">
+              <div class="sub-menu__img">
+                <img alt=" " src="./images/icon-planning.svg">
+              </div>
+              <a class="link link--sub-menu" href="#">Planing</a></li>
           </ul>
         </li>
-        <li class="header__nav-item">Company
-          <ul>
-            <li class="header__nav-sub-item"><a href="#">History</a></li>
-            <li class="header__nav-sub-item"><a href="#">Our Team</a></li>
-            <li class="header__nav-sub-item"><a href="#">Blog</a></li>
+        <li class="header__nav-item header__nav-sub-menu subMenuClosed">Company
+          <ul class="sub-menu hidden">
+            <li class="header__nav-sub-item"><a class="link link--sub-menu" href="#">History</a></li>
+            <li class="header__nav-sub-item"><a class="link link--sub-menu" href="#">Our Team</a></li>
+            <li class="header__nav-sub-item"><a class="link link--sub-menu" href="#">Blog</a></li>
           </ul>
         </li>
-        <li class="header__nav-item"><a href="#">Careers</a></li>
-        <li class="header__nav-item"><a href="#">About</a></li>
+        <li class="header__nav-item"><a class="link link--menu" href="#">Careers</a></li>
+        <li class="header__nav-item"><a class="link link--menu" href="#">About</a></li>
       </ul>
       <ul class="header__nav-login">
-        <li class="header__nav-item"><a href="#">Login</a></li>
+        <li class="header__nav-item"><a class="link link--menu" href="#">Login</a></li>
         <li class="header__nav-item"><a class="button button--light" href="#">Register</a></li>
       </ul>
     </nav>
