@@ -39,7 +39,7 @@ handleScreenSizeChange(screenSize);
 screenSize.addEventListener('change', handleScreenSizeChange);
 navToggle.addEventListener('click', openMenu);
 subMenuToggles.forEach((subMenuToggle, index) => {
-    subMenuToggle.addEventListener('mouseover', e => {
+    subMenuToggle.addEventListener('click', e => {
         e.stopPropagation;
         openSubMenu(index);
     })
