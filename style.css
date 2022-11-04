@@ -220,9 +220,6 @@ body {
     flex-grow: 1;
 }
 
-
-
-
 @media (max-width:800px) {
     .sub-menu {
         position: relative;
@@ -320,6 +317,7 @@ main {
         flex-direction: row-reverse;
         justify-content: flex-start;
         width: 80%;
+        max-width: 1440px;
         gap: 6rem;
     }
 
