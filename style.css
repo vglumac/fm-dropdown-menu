@@ -317,7 +317,7 @@ main {
         flex-direction: row-reverse;
         justify-content: flex-start;
         width: 80%;
-        max-width: 1440px;
+        max-width: 997px;
         gap: 6rem;
     }
 
@@ -330,21 +330,16 @@ main {
         font-size: calc(2 * var(--fs-title));
         text-align: left;
     }
-
+    
     .hero__text {
         color: var(--gray);
         text-align: left;
         line-height: 2rem;
-
     }
 
     .hero__image {
         flex: 1;
     }
-
-
-
-
 }
 
 /* Attribution */
